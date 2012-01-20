@@ -8,6 +8,7 @@
 #include <editormanager.h>
 #include <logmanager.h>
 #include <projectfile.h>
+#include <projectmanager.h>
 
 #include "list_dialog.h"
 
@@ -142,7 +143,7 @@ void Editor_Navigation::OnProjectClose(CodeBlocksEvent &event)
     if (!project)
         return;
 
-    EditorPositions tempPositions;
+    EditorPositions temp_positions;
     unsigned new_index = 0;
     unsigned ii = 0;
 
@@ -150,14 +151,18 @@ void Editor_Navigation::OnProjectClose(CodeBlocksEvent &event)
     {
         if (it->GetProject() != project)
         {
-            tempPositions.push_back(*it);
+            temp_positions.push_back(*it);
             if (ii < m_current_index)
                 ++new_index;
         }
     }
 
-    std::swap(m_positions, tempPositions);
+    std::swap(m_positions, temp_positions);
     m_current_index = new_index;
+
+    size_t project_count = Manager::Get()->GetProjectManager()->GetProjects()->GetCount();
+    if (project_count == 0)
+        m_positions.clear();
 
     if (!m_positions.empty())
     {
@@ -213,7 +218,10 @@ void Editor_Navigation::OnTimer(wxTimerEvent & /*event*/)
         std::advance(start, m_current_index + 1);
         m_positions.erase(start, m_positions.end());
     }
-    m_positions.push_back(m_last_position);
+    if (!m_positions.empty() && m_last_position.IsOnTheSameLine(m_positions.back()))
+        m_positions.back() = m_last_position;
+    else
+        m_positions.push_back(m_last_position);
     m_current_index = m_positions.size() - 1;
 }
 

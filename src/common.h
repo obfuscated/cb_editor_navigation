@@ -37,6 +37,10 @@ public:
     {
         return !(*this == p);
     }
+    bool IsOnTheSameLine(EditorPosition const &p) const
+    {
+        return m_filename == p.m_filename && m_project == p.m_project && m_line == p.m_line;
+    }
 private:
     cbProject const *m_project;
     wxString m_filename;
