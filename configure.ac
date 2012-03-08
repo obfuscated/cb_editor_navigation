@@ -1,10 +1,12 @@
 AC_PREREQ(2.50)
-AC_INIT(Codeblocks Editor Navigation Plugin, 0.1, fuscated@gmail.com)
+AC_INIT(Codeblocks Editor Navigation, 0.1, fuscated@gmail.com)
 
 AM_INIT_AUTOMAKE([subdir-objects])
 
-LT_PREREQ([2.2])
-LT_INIT([dlopen])
+AC_PROG_LIBTOOL
+
+#LT_PREREQ([2.2])
+#LT_INIT([dlopen])
 
 #AM_CONFIG_HEADER([config.h])
 AC_CONFIG_FILES([Makefile])
