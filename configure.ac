@@ -43,7 +43,7 @@ cb_plugin_libdir="`$PKG_CONFIG codeblocks --variable libdir`/codeblocks/plugins/
 AC_SUBST([cb_plugin_datadir])
 AC_SUBST([cb_plugin_libdir])
 
-CPPFLAGS="$CPPFLAGS $CODEBLOCKS_CFLAGS"
+CPPFLAGS="$CPPFLAGS $CODEBLOCKS_CFLAGS -ansi "
 LIBS="$LIBS $CODEBLOCKS_LIBS"
 
 
