@@ -36,6 +36,9 @@
 			<Add option="-Wextra" />
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Makefile.am" />
+		<Unit filename="bootstrap" />
+		<Unit filename="configure.ac" />
 		<Unit filename="resources/build.sh" />
 		<Unit filename="resources/editor_navigation_toolbar_16x16.xrc" />
 		<Unit filename="resources/editor_navigation_toolbar_22x22.xrc" />
