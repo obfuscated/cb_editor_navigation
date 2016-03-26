@@ -192,7 +192,7 @@ void Editor_Navigation::OnEditorUpdateUI(CodeBlocksEvent &event)
 //                                     editor->GetFilename().c_str(), pos, line, pos_in_line));
 
             cbProject *project;
-            project = (editor->GetProjectFile()) ? project = editor->GetProjectFile()->GetParentProject() : NULL;
+            project = (editor->GetProjectFile()) ? editor->GetProjectFile()->GetParentProject() : NULL;
             m_last_position = EditorPosition(project, editor->GetFilename(), line, pos_in_line, pos);
             m_timer.Start(100, wxTIMER_ONE_SHOT);
         }
