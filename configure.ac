@@ -15,6 +15,11 @@ AC_CONFIG_FILES([Makefile])
 # Checks for programs.
 #AC_PROG_CC
 AC_PROG_CXX
+
+# Checks for c++11 supporting compiler
+m4_include([ax_cxx_compile_stdcxx.m4])
+AX_CXX_COMPILE_STDCXX(11, noext)
+
 # Checks for libraries.
 
 AM_OPTIONS_WXCONFIG
