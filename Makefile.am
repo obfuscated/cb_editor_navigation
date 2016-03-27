@@ -1,7 +1,8 @@
 
 ################ build ########################
+ACLOCAL_AMFLAGS = --install -I m4
 
-INCLUDES = $(WX_CXXFLAGS)
+AM_CPPFLAGS = $(WX_CXXFLAGS)
 
 cb_plugin_lib_LTLIBRARIES = libEditor_Navigation.la
 libEditor_Navigation_la_SOURCES = src/editor_navigation.cpp src/list_dialog.cpp
@@ -17,7 +18,7 @@ cb_plugin_data_DATA = Editor_Navigation.zip
 
 Editor_Navigation_RESOURCES = resources/build.sh resources/editor_navigation_toolbar_16x16.xrc resources/editor_navigation_toolbar_22x22.xrc  resources/manifest.xml \
 				 resources/images/editor_navigation/16x16/forward.png  resources/images/editor_navigation/16x16/backward.png \
-				 resources/images/editor_navigation/22x22/forward.png  resources/images/editor_navigation/22x22/backward.png 
+				 resources/images/editor_navigation/22x22/forward.png  resources/images/editor_navigation/22x22/backward.png
 
 EXTRA_DIST = $(Editor_Navigation_RESOURCES) editor_navigation.cbp
 CLEANFILES = Editor_Navigation.zip
