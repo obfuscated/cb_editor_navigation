@@ -1,7 +1,7 @@
 AC_PREREQ(2.50)
-AC_INIT(Codeblocks Editor Navigation, 0.1, fuscated@gmail.com)
+AC_INIT(Codeblocks Editor Navigation, 0.9, fuscated@gmail.com)
 
-AM_INIT_AUTOMAKE([subdir-objects])
+AM_INIT_AUTOMAKE([subdir-objects foreign])
 
 AC_PROG_LIBTOOL
 

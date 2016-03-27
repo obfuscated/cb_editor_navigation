@@ -38,6 +38,7 @@
 			<Add option="-std=c++11" />
 		</Compiler>
 		<Unit filename="Makefile.am" />
+		<Unit filename="README.md" />
 		<Unit filename="bootstrap" />
 		<Unit filename="configure.ac" />
 		<Unit filename="resources/build.sh" />
