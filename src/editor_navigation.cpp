@@ -254,8 +254,8 @@ void Editor_Navigation::SwitchTo(EditorPosition const &pos)
     {
 //        log.Log(wxT("----- found editor, trying to switch!------ "));
         cbStyledTextCtrl *control = editor->GetControl();
+        editor->GotoLine(control->LineFromPosition(pos.GetPos()), true);
         control->GotoPos(pos.GetPos());
-        control->EnsureVisible(control->LineFromPosition(pos.GetPos()));
     }
 }
 
