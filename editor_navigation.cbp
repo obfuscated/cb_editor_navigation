@@ -16,11 +16,11 @@
 				<Option run_host_application_in_terminal="0" />
 				<Compiler>
 					<Add option="`pkg-config --cflags codeblocks`" />
-					<Add option="`wx-config --cflags`" />
+					<Add option="`wx-config --cflags --version=3.0`" />
 				</Compiler>
 				<Linker>
 					<Add option="`pkg-config --libs codeblocks`" />
-					<Add option="`wx-config --libs`" />
+					<Add option="`wx-config --libs  --version=3.0`" />
 					<Add option="-z defs" />
 				</Linker>
 				<ExtraCommands>
@@ -39,13 +39,13 @@
 				<Option host_application="codeblocks" />
 				<Option run_host_application_in_terminal="0" />
 				<Compiler>
-					<Add option="`wx-config --cflags`" />
+					<Add option="`wx-config --cflags --version=3.0`" />
 					<Add directory="$(#cb_sdk.include)" />
 					<Add directory="$(#cb_sdk)/sdk/wxscintilla/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-lcodeblocks" />
-					<Add option="`wx-config --libs`" />
+					<Add option="`wx-config --libs  --version=3.0`" />
 					<Add option="-z defs" />
 					<Add directory="$(#cb_sdk.lib)" />
 				</Linker>
