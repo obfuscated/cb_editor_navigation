@@ -67,12 +67,13 @@
 		<Unit filename="bootstrap" />
 		<Unit filename="configure.ac" />
 		<Unit filename="resources/build.sh" />
-		<Unit filename="resources/editor_navigation_toolbar_16x16.xrc" />
-		<Unit filename="resources/editor_navigation_toolbar_22x22.xrc" />
+		<Unit filename="resources/editor_navigation_toolbar.xrc" />
 		<Unit filename="resources/images/editor_navigation/16x16/backward.png" />
 		<Unit filename="resources/images/editor_navigation/16x16/forward.png" />
 		<Unit filename="resources/images/editor_navigation/22x22/backward.png" />
 		<Unit filename="resources/images/editor_navigation/22x22/forward.png" />
+		<Unit filename="resources/images/editor_navigation/32x32/backward.png" />
+		<Unit filename="resources/images/editor_navigation/32x32/forward.png" />
 		<Unit filename="resources/manifest.xml" />
 		<Unit filename="src/common.h" />
 		<Unit filename="src/editor_navigation.cpp" />

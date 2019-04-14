@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <resource>
-  <object class="wxToolBarAddOn" name="editor_navigation_toolbar_22x22">
+  <object class="wxToolBarAddOn" name="editor_navigation_toolbar">
     <object class="tool" name="idEditorNavigationBackward">
       <tooltip>Navigate backword</tooltip>
       <longhelp>Move the cursor to the previous recorded position</longhelp>
