@@ -122,7 +122,8 @@ void Editor_Navigation::BuildMenu(wxMenuBar* menuBar)
 bool Editor_Navigation::BuildToolBar(wxToolBar* toolBar)
 {
     wxString toolbar_resource = wxT("editor_navigation_toolbar_");
-    if (Manager::isToolBar16x16(toolBar))
+    const int toolbarSize = Manager::Get()->GetToolbarImageSize();
+    if (toolbarSize == 16)
         toolbar_resource += wxT("16x16");
     else
         toolbar_resource += wxT("22x22");
